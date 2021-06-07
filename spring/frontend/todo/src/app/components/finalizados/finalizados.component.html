@@ -1,0 +1,21 @@
+<div class="container">
+    
+    <section class="voltar">
+        <button mat-raised-button (click)="voltar()">
+            Voltar
+        </button>
+    </section>
+    <h1>Tarefas Finalizadas:</h1>
+    <section class="content">
+        <mat-card class="mat-elevation-z5" *ngFor="let item of listFinished">
+            <p>Data Para Finalizar: {{item.dataParaFinalizar}}</p>
+            <mat-card-header>
+                <mat-card-title>{{item.titulo}}</mat-card-title>
+                <mat-card-subtitle>{{item.descricao}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+
+
+    </section>
+
+</div>

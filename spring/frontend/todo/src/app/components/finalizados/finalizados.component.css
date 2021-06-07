@@ -1,0 +1,36 @@
+.container{
+    width: 85%;
+    margin: auto;
+    margin-top: auto;
+}
+
+.content{
+    width: 100%;
+}
+
+.novo-todo{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+mat-card{
+    margin-top: .8rem;
+    padding: .2rem;
+}
+
+p{
+    text-align: end;
+    font-weight: 600;
+    color: rgb(114, 111, 111);
+    margin-bottom: 0px;
+}
+
+.voltar{
+    padding-top: 30px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}

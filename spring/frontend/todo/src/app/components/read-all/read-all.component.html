@@ -1,0 +1,39 @@
+<div class="container">
+
+    <section class="badge">
+        <button mat-raised-button matBadge="{{closed}}" (click)="navegarFinalizados()">
+            Finalizados
+        </button>
+    </section>
+
+    <section>
+
+        <button class="novo-todo" mat-stroked-button color="primary" routerLink="create">Nova Tarefa</button>
+
+    </section>
+
+    <section class="content">
+        <mat-card class="mat-elevation-z5" *ngFor="let item of list">
+            <p>Data Para Finalizar: {{item.dataParaFinalizar}}</p>
+            <mat-card-header>
+                <mat-card-title>{{item.titulo}}</mat-card-title>
+                <mat-card-subtitle>{{item.descricao}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <div class="actions">
+                <button mat-mini-fab color="primary" (click)="finalizar(item)">
+                    <mat-icon>done</mat-icon>
+                </button>
+                <button mat-mini-fab color="accent" routerLink="update/{{item.id}}">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-mini-fab color="warn" (click)="delete(item.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-card>
+
+
+    </section>
+
+</div>
